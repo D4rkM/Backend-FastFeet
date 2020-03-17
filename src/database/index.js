@@ -3,10 +3,11 @@ import 'dotenv/config';
 import Sequelize from 'sequelize';
 
 import User from '../app/models/User';
+import Recipient from '../app/models/Recipients';
 
 import databaseConfig from '../config/database';
 
-const models = [User];
+const models = [User, Recipient];
 
 class Database {
     constructor() {
