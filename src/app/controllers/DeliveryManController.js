@@ -67,7 +67,7 @@ class DeliveryManController {
         }
 
         if(email !== deliveryMan.email) {
-            const deliveryManExists = await User.findOne({
+            const deliveryManExists = await DeliveryMan.findOne({
                 where: {
                     email
                 },
@@ -99,7 +99,7 @@ class DeliveryManController {
 
         await deliveryMan.destroy();
 
-        return res.json({ message: 'deleted succesfully' });
+        return res.json({ message: 'Delivery man deleted succesfully' });
     }
 }
 
