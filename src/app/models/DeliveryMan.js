@@ -7,7 +7,9 @@ class DeliveryMan extends Model {
             avatar_id: Sequelize.STRING,
             email: Sequelize.STRING,
         },{
-            sequelize
+            sequelize,
+            freezeTableName: true,
+            modelName: 'delivery_men',
         });
 
         return this;
